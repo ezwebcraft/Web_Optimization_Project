@@ -6,13 +6,10 @@
     <meta name="description" content="Porfolio">
     <meta name="author" content="Cameron Pittman">
     <title>Cameron Pittman: Portfolio</title>
-    <script  src="js/perfmatters.min.js" async></script>
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
+    <link href="css/print.min.css" rel="stylesheet" media="print" />
+    <script async src="js/perfmatters.min.js"></script>
     <script>
-      var contentload=function(){var e=document.createElement("link");e.rel="stylesheet";e.href="//fonts.googleapis.com/css?family=Open+Sans:400,700";var t=document.getElementsByTagName("head")[0];t.parentNode.insertBefore(e,t)};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(contentload);else window.addEventListener("load",contentload)
-    </script>
-    <script>
-      var contentload=function(){var e=document.createElement("link");e.rel="stylesheet";e.href="css/style.min.css";var t=document.getElementsByTagName("head")[0];t.parentNode.insertBefore(e,t)};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(contentload);else window.addEventListener("load",contentload)
+      var cb=function(){var e=document.createElement("link");e.rel="stylesheet";e.href="css/style.min.css";var t=document.getElementsByTagName("head")[0];t.parentNode.insertBefore(e,t)};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(cb);else window.addEventListener("load",cb)
     </script>
   </head>
   <body>
