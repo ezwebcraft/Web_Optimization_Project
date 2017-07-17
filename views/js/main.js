@@ -498,7 +498,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 // My Notes for Optimizations
-// !optimize: initialize latest scroll position to 0 and tick to true
+// initialize the latest scroll position to 0 and ticking variable to true
 var last_Scroll_Y = 0;
 var ticking = true;
 

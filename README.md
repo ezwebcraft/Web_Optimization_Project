@@ -55,7 +55,43 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
 
 
+# Website Performance Optimization Project
 
-# Documentation
+The objective to optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.
+
+# Goal
 
 A README file is included detailing all steps required to successfully run the application and outlines the optimizations that the student made in index.html and views/js/main.js for pizza.html
+
+
+- optimize images by create new version with optimizilla.Image compression: images were rescaled and resized to the final layout dimensions
+  -  source can be found at [optimizilla](http://optimizilla.com/)
+  - create a min image for pizzera(a thumbnail)
+
+
+- minified css and js with a command line tool called minifier
+  - source of [minifier](https://www.npmjs.com/package/minifier)
+
+
+- check the FPS using Google Dev Tools
+- optimize js in section scroll
+  - using reference from  https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+
+#### screenshots
+
+#### Index Page
+
+![index](img/index-page-FPS.png)
+
+#### Pizzera
+
+![Pizzera](img/Pizzera-FPS.png)
+
+
+### Validate Score from Google Page Speed tool
+
+#### DeskTop Score
+![Desktop](img/DeskTop-Score-90+.png)
+
+##### Mobile Score
+![Mobile](img/mobile-score-90+.png)
