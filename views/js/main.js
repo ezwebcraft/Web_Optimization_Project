@@ -205,10 +205,10 @@ function getAdj(x){
       "extinct", "galactic"];
       return scientific;
     default:
-      var scientific = ["scientific", "technical", "digital", "programming", "calculating", "formulating", "cyberpunk", "mechanical", "technological",
+      var scientific_default = ["scientific", "technical", "digital", "programming", "calculating", "formulating", "cyberpunk", "mechanical", "technological",
       "innovative", "brainy", "chemical", "quantum", "astro", "space", "theoretical", "atomic", "electronic", "gaseous", "investigative", "solar",
       "extinct", "galactic"];
-      return scientific;
+      return scientific_default;
   }
 }
 
@@ -274,11 +274,11 @@ function getNoun(y) {
       "universe", "gravity", "darkMatter", "constellation", "circuit", "asteroid"];
       return scifi;
     default:
-      var scifi = ["robot", "alien", "raygun", "spaceship", "UFO", "rocket", "phaser", "astronaut", "spaceman", "planet", "star", "galaxy",
+      var scifi_default  = ["robot", "alien", "raygun", "spaceship", "UFO", "rocket", "phaser", "astronaut", "spaceman", "planet", "star", "galaxy",
       "computer", "future", "timeMachine", "wormHole", "timeTraveler", "scientist", "invention", "martian", "pluto", "jupiter", "saturn", "mars",
       "quasar", "blackHole", "warpDrive", "laser", "orbit", "gears", "molecule", "electron", "neutrino", "proton", "experiment", "photon", "apparatus",
       "universe", "gravity", "darkMatter", "constellation", "circuit", "asteroid"];
-      return scifi;
+      return scifi_default;
   }
 }
 
@@ -498,11 +498,11 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 // My Notes for Optimizations
-// initialize the latest scroll position to 0 and ticking variable to true
+// Initialize the latest scroll position to 0 and ticking variable to true
 var last_Scroll_Y = 0;
 var ticking = true;
 
-// from the example link(scroll callback, bound to scroll window event listener)
+// from the example link(scroll callback, bound to scroll window event listener) for when needed
 function scroll_New() {
   last_Scroll_Y = window.scrollY;
   request_Tick();
