@@ -406,13 +406,13 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.getElementById("#pizzaSize").innerHTML = "Small";
+        document.getElementById('pizzaSize').innerHTML = "Small";
         return;
       case "2":
-        document.getElementById("#pizzaSize").innerHTML = "Medium";
+        document.getElementById('pizzaSize').innerHTML = "Medium";
         return;
       case "3":
-        document.getElementById("#pizzaSize").innerHTML = "Large";
+        document.getElementById('pizzaSize').innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -424,7 +424,7 @@ var resizePizzas = function(size) {
    // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
   function determineDx (elem, size) {
     var oldWidth = elem.offsetWidth;
-    var windowWidth = document.getElementsByClassName("#randomPizzas").offsetWidth;
+    var windowWidth = document.getElementById('randomPizzas').offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
     // Changes the slider value to a percent width
@@ -448,7 +448,7 @@ var resizePizzas = function(size) {
   }
 
 // create variable outside the loop to improve the performance
-  var pizza_containers = document.getElementsByClassName(".randomPizzaContainer");
+  var pizza_containers = document.getElementById('randomPizzaContainer');
   var pizza_containers_length = pizza_containers.length;
   // Now I can use these for the dx and newwidth
   var dx = determineDx(pizza_containers[0], size);
@@ -476,7 +476,7 @@ window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
+  var pizzasDiv = document.getElementById('randomPizzas');
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -554,16 +554,16 @@ window.addEventListener('scroll', scroll_New);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var rows = height / s
+  // var rows = height / s
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * rows;
-    elem.style.top = (Math.floor(i / cols) * rows) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.getElementById('movingPizzas1').appendChild(elem);
   }
   updatePositions();
 });
