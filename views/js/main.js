@@ -449,10 +449,10 @@ var resizePizzas = function(size) {
 
 // create variable outside the loop to improve the performance
   var pizza_containers = document.getElementsByClassName(".randomPizzaContainer");
-  var pizza_containers_length = pizzaContainers.length;
+  var pizza_containers_length = pizza_containers.length;
   // Now I can use these for the dx and newwidth
-  var dx = determineDx(pizzaContainers[0], size);
-  var newwidth = (pizzaContainers[0].offsetWidth + dx) + 'px';
+  var dx = determineDx(pizza_containers[0], size);
+  var newwidth = (pizza_containers[0].offsetWidth + dx) + 'px';
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
@@ -554,15 +554,16 @@ window.addEventListener('scroll', scroll_New);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  var rows = height / s
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
-    elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("#movingPizzas1").appendChild(elem);
+    elem.basicLeft = (i % cols) * rows;
+    elem.style.top = (Math.floor(i / cols) * rows) + 'px';
+    document.getElementById("movingPizzas1").appendChild(elem);
   }
   updatePositions();
 });
