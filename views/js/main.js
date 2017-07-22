@@ -554,9 +554,11 @@ window.addEventListener('scroll', scroll_New);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-
-
-  var num_pizza = 20
+  //  dynamically calculate the number of pizzas needed
+  //  to fill the screen, based on browser window resolution
+  var height = window.screen.height;
+  var rows =  Math.round(height/s);
+  var num_pizza = rows * cols;
 
   for (var i = 0; i < num_pizza; i++) {
     var elem = document.createElement('img');
