@@ -448,7 +448,7 @@ var resizePizzas = function(size) {
   }
 
 // create variable outside the loop to improve the performance
-  var pizza_containers = document.getElementById('randomPizzaContainer');
+  var pizza_containers = document.getElementsByClassName('randomPizzaContainer');
   var pizza_containers_length = pizza_containers.length;
   // Now I can use these for the dx and newwidth
   var dx = determineDx(pizza_containers[0], size);
